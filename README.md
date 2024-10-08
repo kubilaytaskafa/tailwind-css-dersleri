@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 44ca978082ee7e4b2492359c0f2ce4a29540276a
 
 # -DERS 1 TAİLWİND CSS NEDİR?-
 
@@ -27,6 +30,7 @@
 #### Tailwind CSS IntelliSense extension u sayesinde tailwind yazarken crtl+space yaptığınızda size ilgili tailwind kodlarını gösterir.
 
 #### Auto Rename Tag extensionunu da kullanabilirsiniz.
+<<<<<<< HEAD
 
 # DERS 3 TAİLWİND CSS KURULUMU
 
@@ -225,3 +229,5 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 #### artık her dev komutu çalıştığında watch işlemi çalışacak
 
 ### !!!! TEBRİKLER ARTIK TAİLWİND YAZABİLİRSİNİZ !!!!!!!!
+=======
+>>>>>>> 44ca978082ee7e4b2492359c0f2ce4a29540276a
