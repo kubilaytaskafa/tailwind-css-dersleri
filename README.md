@@ -225,3 +225,56 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 #### artık her dev komutu çalıştığında watch işlemi çalışacak
 
 ### !!!! TEBRİKLER ARTIK TAİLWİND YAZABİLİRSİNİZ !!!!!!!!
+
+# -DERS-4 TAİLWİND CSS APPLY ,LAYER BASE VE COMPONENT KULLANIMI-
+
+#### bazen sitelerde çok fazla aynı componenti kullanıyor olabiliriz.
+
+#### geliştirme sürecinde sürekli olarak copy paste yapmak bizi yorabilir.
+
+#### daha kötüsü diyelim bir buton tanımlaması yapıp 30 yerde kullandık fakat butonun renginin değişmesi gerekti.30 farklı componentte bu değişikliği yönetmek oldukça zordur.
+
+#### tailwind bizlere bu konuda yardımcı oluyor. Tailwind sayesinde belirli style işlemlerini bir classa bağlayarak kullanabiliriz.
+
+```
+<!-- kendi classlarımızı @layer components içerisinde yazacağız. -->
+@layer components{
+  <!-- kendi classımız bu classı artık isteidğimiz yerde kullanabiliriz. -->
+  .btn-primary{
+    <!-- @apply ile tailwind css kodlarımızı tutarız. -->
+    @apply py-2 bg-red-400
+  }
+}
+```
+
+### -Layer Base kullanımı-
+
+#### base ile standart etiketlere müdahale etmemizi sağlar.
+
+#### layer base kullanarak html etiketlerine kendi özelliklerimizi atarız.
+
+#### base kullanarak kendi classımızı değil de kendi etiketimizi oluşturuyoruz.
+
+#### kullanımı:
+
+```
+@layer base{
+  <!-- kendi h1 etiketimizi tanımladık artık kullandığımız bütün h1 ler kırmızı renginde ve 3xl boyutunda olacaktır. -->
+  h1{
+    @apply text-red-400 text-3xl
+  }
+}
+```
+
+#### @apply tanımlamasını kullanmazsanız verdiğiniz style özellikleri çalışmaz.
+
+#### örnek:
+
+```
+@layer base{
+  p{
+    <!-- bütün p etiketlerimiz kalın yazılacaktır. -->
+    @apply font-bold
+  }
+}
+```
