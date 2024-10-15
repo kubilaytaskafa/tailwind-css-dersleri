@@ -278,3 +278,46 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
   }
 }
 ```
+
+# -DERS-5 TAİLWİND CSS BREAKPOİNTS RESPONSİVE DESİGN-
+
+#### tailwind ile responsive design yapmak kolaydır.
+
+#### tailwind classları içerisinde breakpointsler mevcuttur.
+
+### breakpoint nedir?
+
+#### breakpoint, tarayıcı sayfasının belirli px lere göre adlandırılmasıdır.
+
+#### aşağıda tailwindin breakpoint lerini görüyorsunuz .
+
+```
+Breakpoint prefix	Minimum width	CSS
+sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... }
+```
+
+#### bir elementin classında bu breakpointleri kullanarak tasarım yapabilirsiniz ve responsive tasarımlarınızı kolayca oluşturabilirsiniz.
+
+#### örnek:
+
+```html
+<!-- img etiketi  width değeri default olarak 16 (16 px değil tailwind kendi içnde değerlendirme yapar.) -->
+<!--img etiketi medium breakpointte yani min width 768px olduğunda 32   -->
+<!-- img etiketi lg breakpointte yani min width 1024px olduğunda 48 dir. -->
+<img class="w-16 md:w-32 lg:w-48" src="..." />
+```
+
+#### mobile bir cihazda tasarım yaparken sm değerini kullanmanıza gerek yoktur.
+
+#### yukarıdaki örnekte gördüğünüz üzere sm değeri kullanmadık. aslında sm değeri başta verdiğimiz w-16 değeridir.
+
+### örnek
+
+```html
+<!-- burada işlediğimiz classlara göre elementimizin rengi değişecektir. -->
+<p class="text-red-600 md:text-red-800 lg:text-red-500">HEllo</p>
+```
