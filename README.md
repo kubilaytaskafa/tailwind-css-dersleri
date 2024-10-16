@@ -321,3 +321,50 @@ xl	1280px	@media (min-width: 1280px) { ... }
 <!-- burada işlediğimiz classlara göre elementimizin rengi değişecektir. -->
 <p class="text-red-600 md:text-red-800 lg:text-red-500">HEllo</p>
 ```
+
+# - DERS-6 TAİLWİND CONTAİNER-
+
+#### tailwind de container classımız vardır.
+
+#### container classımız sayesinde elementimizin yükseklik ve genişliğini ayarlayabiliriz. container ı kullandığımız zaman tarayıcının boyutuna göre bizlere width değeri ekler.
+
+#### tabii ki container ile birlikte birden çok hizalama classımız mevcuttur .
+
+### mx-auto classı :
+
+#### bir elementte eğer mx-auto classını kullanırsanız tailwind o elementi sağdan ve soldan ortalar .
+
+#### örnek:
+
+```html
+<!-- burada container classı ile birlikte mx-auto kullandık ve divimiz sağdan soldan ortalandı. -->
+<div class="container mx-auto"></div>
+```
+
+#### dikkat ! container classı ile hizalama classını kapsayıcı divde kullanmak mantıklıdır. eğer kapsayıcı divde kullanmazsak sayfaya eklenen her elementte container ile hizalama classlarını kullanırız. bu da clean code açısından bizleri patlatır.
+
+#### unutmayın en iyi yazılımcı az ve öz kod yazan yazılımcıdır. BİZLER KATİP DEĞİLİZ!!!
+
+#### örnek
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <div class="bg-gray-600">
+        <h1>1. div</h1>
+      </div>
+      <div class="bg-red-600">
+        <h1>2.div</h1>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- burada gördüğünüz üzere ana kapsayıcı dive container mx-auto dedik bu sayede kapsayıcı içinde bulunan her bir div tarayıcıda ortalanır. -->
+```
