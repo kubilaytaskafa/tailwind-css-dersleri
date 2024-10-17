@@ -368,3 +368,88 @@ xl	1280px	@media (min-width: 1280px) { ... }
 </html>
 <!-- burada gördüğünüz üzere ana kapsayıcı dive container mx-auto dedik bu sayede kapsayıcı içinde bulunan her bir div tarayıcıda ortalanır. -->
 ```
+
+# -DERS 7 TAİLWİND BOX SİZİNG-
+
+#### bizler bir web sitesi geliştirirken html kullanırız. Html de ise yüksek oranda divler kullanarak birleştirme işlemi yaparız.
+
+#### html de div ler box(kutu) dur.
+
+#### işte kullandığımız bu divlerin witdh height değerleri, taşma durumları bizim için önemlidir. Çünkü divin içine eklediğimiz eleman divden taşabilir.
+
+#### bizler css de box sizing özelliği ile özelliği ile divlerimizin width,height ve taşma özelliklerini yönetebiliriz.
+
+#### Tailwind'de box sizing özelliği 2 şekilde tanımlanmıştır:
+
+- BOX-BORDER
+
+#### box-border özelliğinde bir elementin padding ve border özelliği kutunun genişlik yüksekliğine dahil edilir.
+
+#### yani sizler border-box olan bir dive 200px genişlik verdiğinizde içerisindeki element paddin ve border dahil 200px olur.
+
+#### örnek:
+
+```html
+<!-- burada divimizin box özelliği border   -->
+<!-- yani div içindeki padding ve border dahil olmak suretiyle  w-64 değerini alır.  -->
+<div class="box-border w-64">kutu!</div>
+```
+
+- BOX-CONTENT
+
+#### box-content özelliği box-border özelliğine nazaran sadece içeriği hedef alır .
+
+#### yani box-content özelliği alan bir dive verdiğiniz width ve height değerleri border ve paddingi dahil etmeden eklenir.
+
+#### örnek:
+
+```html
+<!-- burada divimizin box özelliği content -->
+<!-- yani divimizin witdh değeri margin padding eklenmeden w-64 tür. -->
+<div class="box-content w-64">kutu'</div>
+```
+
+### Peki aralarındaki fark nedir?
+
+#### sizler 2 tane dive de aynı width değerleri verip box özelliklerini farklı yazdığınızda:
+
+#### box özelliği content olanın genişliği daha fazla olacaktır.
+
+# DERS-8 TAİLWİND DİSPLAY-
+
+#### display elementin bir web sitesi üzerinde nasıl gözükmesi gerektiğini belirlediğimiz tanımlamadır.
+
+#### örneğin displayi block olan element aynı satırda yanına başka bir element alamaz çünkü bulunduğu satırı tamamen kaplar.
+
+#### bizler display durumlarını değiştirerek tasarımlarımızda kişisel tercihler yapabiliriz.
+
+#### Tailwindde bizler display özelliğini çeşitli classlarla kullanırız.
+
+#### tailwindde display özelliği vermek için sadece class içerisinde vermek istediğiniz display özelliğini yazmak yeterlidir.
+
+```
+          TAİLWİND-DİSPLAY-ÖZELLİKLERİ-
+
+ Class     Properties
+block	   display: block;
+inline-block   	display: inline-block;
+inline   	display: inline;
+flex	   display: flex;
+inline-flex	   display: inline-flex;
+table	   display: table;
+inline-table	   display: inline-table;
+table-caption	   display: table-caption;
+table-cell	   display: table-cell;
+table-column	   display: table-column;
+table-column-group	   display: table-column-group;
+table-footer-group	   display: table-footer-group;
+table-header-group	   display: table-header-group;
+table-row-group	display:    table-row-group;
+table-row   	display: table-row;
+flow-root	   display: flow-root;
+grid	   display: grid;
+inline-grid   	display: inline-grid;
+contents   	display: contents;
+list-item	   display: list-item;
+hidden	   display: none;
+```
