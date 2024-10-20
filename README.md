@@ -453,3 +453,27 @@ contents   	display: contents;
 list-item	   display: list-item;
 hidden	   display: none;
 ```
+
+# DERS-9 TAİLWİND HOVER,FOCUS VB,-
+
+#### CSS deki hover, focus gibi uygulamalarımızı tailwindde yapmak daha basittir.
+
+### Hover :
+
+#### tailwindde hover efekti vermek için class olarak hover: kullanmak yeterlidir.
+
+#### örnek:
+
+```html
+<!-- Burada div e hover durumu olduğunda divin arkaplan rengi siyah olacaktır.   -->
+<div class="bg-red-600  hover:bg-black">Kutu 1</div>
+```
+
+#### !! dikkat hover durumunda vereceğiniz her bir özelliği tek tek hover: kullanarak vermelisiniz.
+
+#### örnek:
+
+```html
+<!-- burada 2 ayrı hover durumu ekledik. bu eklemeyi yaparken 2 tane hover kullandık. -->
+<div class="bg-red-600 text-white hover:bg-black hover:text-red-500"></div>
+```
